@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    int units;
+    float amount = 0;
+
+    scanf("%d", &units);
+
+    if (units < 0) {
+        printf("Invalid Input!\n");
+    } else
+        {
+        if (units <= 100) {
+            amount = units * 5; 
+        }
+        else if (units <= 300)
+        {
+            amount = (100 * 5) + (units - 100) * 7; 
+        } else
+        {
+            amount = (100 * 5) + (200 * 7) + (units - 300) * 10;
+        }
+        if (amount <= 1200) {
+            amount = amount - (amount * 0.1);
+        }
+
+        printf("The electricity bill is: %.2f.\n", amount);
+    }
+
+    return 0;
+}
