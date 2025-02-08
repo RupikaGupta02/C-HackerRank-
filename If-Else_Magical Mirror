@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+    int main() {
+    int N, number_satisfies = 0;
+        
+    scanf("%d", &N);
+        
+    printf("The verdict for the number %d is: ", N);
+        
+    if(N <= 0){
+        printf("INVALID\n");
+        return 0;
+    }
+        
+    if(N % 2 == 0 && N > 10){
+        number_satisfies++;
+    }
+        
+    if(N > 15 && N % 3 == 0){
+        number_satisfies++;
+    }
+    if(N % 7 == 0){
+        number_satisfies++;
+    }
+        
+    if(number_satisfies == 3){
+        printf("SUPERNATURAL\n");
+    }
+    else if(number_satisfies == 2){
+        printf("MIRACULOUS\n");
+    }
+    else if(number_satisfies == 1){
+        printf("MAGICAL\n");
+    }
+    else{
+        printf("NORMAL\n");
+    }
+    return 0;
+}
+    
