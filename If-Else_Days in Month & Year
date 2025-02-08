@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main() {
+    
+    int month, year;
+    scanf("%d", &month);
+    scanf("%d", &year);
+    if (month < 1 || month > 12) {
+        printf("Invalid Month\n");
+    }
+    if (year < 1) {
+        printf("Invalid Year");
+    }
+    if (month >= 1 && month <= 12 && year >= 1) {
+        int days;
+        switch(month) {
+            case 4: case 6: case 9: case 11:
+                days = 30;
+                break;
+                
+            case 2: 
+                if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0))
+                    days = 29;
+                else
+                    days = 28;
+                break;
+                
+            default: 
+                days = 31;
+        }
+        
+        printf("%d", days);
+    }
+     return 0;
+}
