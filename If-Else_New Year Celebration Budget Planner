@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main() {
+    int budget, numGuest, foodcost, decoration, music, extra;
+    scanf("%d %d %d %d %d %d", &budget, &numGuest, &foodcost, &decoration, &music, &extra);
+    
+    int totalfoodcost = foodcost * numGuest;
+    int totalcost = totalfoodcost + decoration + music + extra;
+    
+    if(budget < 1 && budget > 10){
+        printf("Celebration Denied\n");
+    }
+    if(numGuest < 1 && numGuest > 100 ){
+        printf("Celebration Denied\n");
+    }
+     if(foodcost < 1 && foodcost > 10000 ){
+        printf("Celebration Denied\n");
+    }
+     if(decoration < 1 && decoration > 10000 ){
+        printf("Celebration Denied\n");
+    }
+     if(music < 1 && music > 10000 ){
+        printf("Celebration Denied\n");
+    }
+     if(extra < 1 && extra > 10000 ){
+        printf("Celebration Denied\n");
+    }
+    
+    if(totalcost <= budget && numGuest > 5 && numGuest <= 50){
+        if((decoration < (0.3 * budget) || totalfoodcost < (0.5 * budget)) || (numGuest > 25 && music > 0)){
+            printf("Celebration Approved");
+        }
+        else {
+            printf("Celebration Denied");
+        }
+    }
+    else {
+        printf("Celebration Denied");
+    }
+    
+    return 0;
+}
