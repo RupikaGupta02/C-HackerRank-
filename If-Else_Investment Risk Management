@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    int age, risk_tolerance;
+    int annual_income;
+    scanf("%d", &age);
+    scanf("%d", &risk_tolerance);
+    scanf("%d", &annual_income);
+    
+    if(age>50){
+        if(annual_income > 75000 && risk_tolerance == 3){
+            printf("High Risk Portfolio: Suitable for aggressive investors with high-risk tolerance.\n");
+        }
+        else{
+            printf("Low Risk Portfolio: Suitable for conservative investments.\n");
+        }
+    }
+    else if(age >= 30 && age <=50){
+        if(annual_income > 75000 && risk_tolerance == 3){
+            printf("High Risk Portfolio: Suitable for aggressive investors with high-risk tolerance.\n");
+        } else if(annual_income <= 75000 &&(risk_tolerance == 1 || risk_tolerance == 2)){
+            printf("Medium Risk Portfolio: Balanced risk for moderate return.\n");
+        }else{
+            printf("Low Risk Portfolio: Suitable for conservative investments.\n");
+        }
+    }else if(age < 30){
+        printf("High Risk Portfolio: Suitable for aggressive investors with high-risk tolerance.\n");
+    }
+               
+    return 0;
+}
