@@ -1,0 +1,51 @@
+#include <stdio.h>
+    int main(){
+    int N0, N1,N2,N3,N4,N5,N6,N7,N8,N9,index1, rotation1,index2, rotation2,index3, rotation3;
+    scanf("%d %d %d %d %d %d %d %d %d %d", &N0,&N1, &N2, &N3, &N4, &N5, &N6, &N7, &N8, &N9);
+    
+    
+    scanf("%d %d", &index1, &rotation1);
+
+    
+    scanf("%d %d", &index2, &rotation2);
+    
+    
+    scanf("%d %d", &index3, &rotation3);
+     if(index1 == 0) N0 = (N0 + rotation1) % 10;
+     else if(index1 == 1) N1 = (N1 + rotation1) % 10;
+     else if(index1 == 2) N2 = (N2 + rotation1) % 10;
+     else if(index1 == 3) N3 = (N3 + rotation1) % 10;
+     else if(index1 == 4) N4 = (N4 + rotation1) % 10;
+     else if(index1 == 5) N5 = (N5 + rotation1) % 10;
+     else if(index1 == 6) N6 = (N6 + rotation1) % 10;
+     else if(index1 == 7) N7 = (N7 + rotation1) % 10;
+     else if(index1 == 8) N8 = (N8 + rotation1) % 10;
+     else if(index1 == 9) N9 = (N9 + rotation1) % 10;
+    
+
+     if(index2 == 0) N0 = (N0 + rotation2) % 10;
+     else if(index2 == 1) N1 = (N1 + rotation2) % 10;
+     else if(index2 == 2) N2 = (N2 + rotation2) % 10;
+     else if(index2 == 3) N3 = (N3 + rotation2) % 10;
+     else if(index2 == 4) N4 = (N4 + rotation2) % 10;
+     else if(index2 == 5) N5 = (N5 + rotation2) % 10;
+     else if(index2 == 6) N6 = (N6 + rotation2) % 10;
+     else if(index2 == 7) N7 = (N7 + rotation2) % 10;
+     else if(index2 == 8) N8 = (N8 + rotation2) % 10;
+     else if(index2 == 9) N9 = (N9 + rotation2) % 10;
+     
+     if(index3 == 0) N0 = (N0 + rotation3) % 10;
+     else if(index3 == 1) N1 = (N1 + rotation3) % 10;
+     else if(index3 == 2) N2 = (N2 + rotation3) % 10;
+     else if(index3 == 3) N3 = (N3 + rotation3) % 10;
+     else if(index3 == 4) N4 = (N4 + rotation3) % 10;
+     else if(index3 == 5) N5 = (N5 + rotation3) % 10;
+     else if(index3 == 6) N6 = (N6 + rotation3) % 10;
+     else if(index3 == 7) N7 = (N7 + rotation3) % 10;
+     else if(index3 == 8) N8 = (N8 + rotation3) % 10;
+     else if(index3 == 9) N9 = (N9 + rotation3) % 10;
+    
+
+    printf("%d %d %d %d %d %d %d %d %d %d",N0,N1,N2,N3,N4,N5,N6,N7,N8,N9);
+    
+    }
