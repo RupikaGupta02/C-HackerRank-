@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    int a,b,x;
+    scanf("%d %d", &a, &b);
+    
+    x = a-b;
+    if(x>>31){
+        printf("%d", a);
+    }
+    else{
+        printf("%d", b);    }
+
+    return 0;
+}
