@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() {
+    int a,b,x,y,sign;
+    scanf("%d %d", &a, &b);
+     x = a - b;
+    sign= (a-b)>>31;
+    y = ((a & (~sign)) | (b & sign));
+    printf("%d",y);
+    
+    
+    return 0;
+}
