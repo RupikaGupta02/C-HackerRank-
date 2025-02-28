@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    printf("%d ", n);
+    int maxNumber = n;
+    while(n != 1){
+        
+        if(n%3 == 0 && n>0){
+            n = n/3;
+        } else if(n%5==0 && n%3!=0 && n>0){
+            n = n-5;
+        } else if(n <1){
+            n = 1;
+        } else{
+            n = n * 5;
+            
+        }
+        printf("-> %d ", n);
+     if(n > maxNumber){
+        maxNumber = n;
+    }
+    }
+        
+        printf("\nMax Number: %d\n", maxNumber);
+    
+    return 0;
+}
