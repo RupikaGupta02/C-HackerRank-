@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int n ;
+    scanf("%d",&n);
+    int i=1;
+    
+    int num = 1;
+        for(int x=1;x<=n;x++){
+            i++;
+            for(int y=0;y<=x-1;y++){
+                printf("%d ", num-y);    
+            }
+            num = num + i;
+            printf("\n");
+        }
+    return 0;
+}
