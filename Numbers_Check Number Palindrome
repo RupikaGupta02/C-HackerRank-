@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+
+    int N,reverse=0;
+    scanf("%d",&N);
+    int initial = N;
+    while(N!=0){
+        int last_digit = N%10;
+        reverse = reverse*10 +last_digit;
+        N/=10;  
+    }
+    if(reverse == initial)
+        printf("YES");
+    else
+        printf("NO");
+    
+    return 0;
+}
