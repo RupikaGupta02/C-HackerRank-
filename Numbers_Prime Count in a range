@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int L, R, num, count = 0, temp, prime;
+    scanf("%d%d", &L, &R);
+
+    if (L > R) {
+        temp = L;
+        L = R;
+        R = temp;
+    }
+
+    for (num = L; num <= R; num++) {
+        if (num < 2) continue;  
+        prime = 1;
+        for (int i = 2; i * i <= num; i++) {
+            if (num % i == 0) {
+                prime = 0;
+                break;
+            }
+        }
+        if (prime) {
+            printf("%d ", num);
+            count++; 
+        }
+    }
+
+    printf("\n%d\n", count);
+    return 0;
+}
