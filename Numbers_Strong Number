@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    int N, sum = 0, fact, ini, num;
+    scanf("%d", &N);
+    
+    ini = N;
+    while(N > 0){
+        num = N % 10;
+        fact = 1;
+    
+    for(int i=1; i <=num; i++){
+       fact *= i;
+    }
+    
+    sum += fact;
+    N /= 10;
+    }
+    if(sum == ini)
+        printf("YES");
+    else
+        printf("NO");
+    
+    return 0;
+}
