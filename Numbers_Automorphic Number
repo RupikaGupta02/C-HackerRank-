@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int original;
+    scanf("%d", &original);
+    
+    int num1 , num2 ;
+    num1 = num2 = original ;
+    
+    int count = 0 , sum = 0 , check = 0;
+    
+    while(num1 != 0){
+        int last = num1 % 10;
+        sum += last;
+        num1 = num1/10;
+        count += 1;
+    }
+    int square = (int)pow(original, 2);
+    int use_square = square ;
+    
+    while(use_square > 10){
+        int last = use_square % (int)pow(10,count);
+        check += last ;
+        use_square = use_square/(int)pow(10,count);
+    }
+    if(check == original)
+        printf("%d is automorphic",original);
+    else
+        printf("%d is not automorphic",original);
+    
+    
+    return 0;
+}
