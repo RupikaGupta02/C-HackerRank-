@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    
+    int n;
+    scanf("%d",&n);
+    int orig = n;
+    int n2 = n;
+    
+    int digit = 0;
+    while(n>0){
+        n = n/10;
+        digit++;
+    }
+    
+    int num=0;
+    while(n2>0){
+        int last = n2%10;
+        num += pow(last,digit);
+        n2 = n2/10;
+    }
+    
+   if(orig == num){
+        printf("YES");
+   }else{
+       printf("NO");
+   }
+    
+    return 0;
+}
