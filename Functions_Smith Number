@@ -1,0 +1,58 @@
+#include <stdio.h>
+
+int primeCheck(int n){
+    for(int i=2; i*i<=n; ++i){
+        if(n%i==0)
+            return 0;
+    }
+    return 1;
+}
+int is_smith_number(int num) {
+    if(num<2 || primeCheck(num))
+        return 0;
+    int n = num;
+    
+    int sum=0;
+    while(n>0){
+        int lastdigit = n%10;
+        sum +=lastdigit;
+        n/=10;
+    }
+    n=num;
+    int primeSum=0;
+
+    for(int i=2; i<=n; ++i){
+        while(n%i==0){
+            int primeValue=i;
+            if(primeValue < 10){
+                
+                primeSum += primeValue;
+            }
+            else{
+                while(primeValue > 0){
+                    int lastdigit = primeValue % 10;
+                    primeSum += lastdigit;
+                    primeValue /= 10;
+                }
+            }
+            
+            n /= i;
+        }
+        
+    }
+    
+    if(primeSum == sum){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+    
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    printf("%d\n", is_smith_number(n));
+    return 0;
+}
