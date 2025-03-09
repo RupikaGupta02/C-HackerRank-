@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include<math.h>
+
+int main() {
+    double a, b, c, D, root1, root2, realPart, imagPart;
+    
+    scanf("%lf %lf %lf", &a, &b, &c);  
+    
+    D = (b * b) - (4 * a * c);
+    
+    if(D > 0)
+        goto check;
+    if(D == 0)
+        goto see;
+    if(D < 0)
+        goto find;
+
+   check:
+    root1 = (-b + sqrt(D)) / (2 * a);
+    root2 = (-b - sqrt(D)) / (2 * a);
+    printf("Roots: %.2lf, %.2lf\n", root1, root2);
+    printf("Type: Real and Distinct\n");
+    return 0;
+   
+    see:
+    root1 = (-b + sqrt(D)) / (2 * a);
+    root2 = (-b - sqrt(D)) / (2 * a);
+    printf("Roots: %.2lf, %.2lf\n", root1, root2);
+    printf("Type: Real and Equal\n");
+    return 0;
+
+    find:
+    realPart = -b / (2 * a);
+    imagPart = sqrt(-D) / (2 * a);
+    printf("Roots: %.2lf + %.2lfi, %.2lf - %.2lfi\n", realPart, imagPart, realPart, imagPart);
+    printf("Type: Complex\n");
+    return 0;
+  
+    
+}
