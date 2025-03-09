@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int is_prime(int num){
+    if(num < 2)
+        return 0;
+   if(num ==2)
+       return 1;
+    for(int i=2; i*i <=num;i++){
+        if(num % i== 0)
+            return 0;
+    }
+    return 1;
+}
+
+int main(){
+    int N, flag = 0;
+    scanf("%d", &N);
+    for(int p = 2; p<=N/2; p++){
+        int q = N-p;
+        if(is_prime(p) && is_prime(q) && flag == 0){
+            printf("%d %d", p,q);
+        flag = 1;
+        break;
+        }
+    }
+    if(flag == 0)
+        printf("No Solution");
+    }
