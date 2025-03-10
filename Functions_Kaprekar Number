@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <math.h>
+
+int is_kaprekar(int n) {
+        int N = n;
+        int S = N*N;
+        int d = 0;
+        
+    while(N>0){
+        d++;
+        N = N / 10;
+    }
+    
+        int left = S /(int)pow(10, d);
+        int right = S %(int)pow(10, d);
+        int res = left + right;
+        
+        if(res == n)
+            return 1;
+        else
+            return 0;
+        
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    printf("%d\n", is_kaprekar(n));
+    return 0;
+}
